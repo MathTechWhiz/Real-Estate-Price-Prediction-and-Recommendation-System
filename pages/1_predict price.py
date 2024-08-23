@@ -51,8 +51,8 @@ if st.button('Predict'):
 
     # Calculate the base price
     baseprice_array = np.expm1(pipeline.predict(one_df))
-    baseprice = float(baseprice_array)
-
+    #baseprice = float(baseprice_array)
+    baseprice = baseprice_array.item()
     # Calculate the lower and upper bounds
     low = baseprice - 0.22
     heigh = baseprice + 0.22
